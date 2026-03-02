@@ -32,19 +32,7 @@
     font-size: 14px;
     font-weight:80%;
 }
-#hideId{
-position: fixed;       /* covers entire screen */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
 
-  background: rgba(0, 0, 0, 0.4); /* transparent dark overlay */
-  justify-content: center;
-  align-items: center;
-
-  z-index: 999;
-}
 /* class to hide and show elements */
 .hidden{
     display:none;
