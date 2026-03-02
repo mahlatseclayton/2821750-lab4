@@ -2,12 +2,15 @@ async function searchCountry(){
         const showLoad=document.getElementById("loading-spinner");
         const countryName=document.getElementById("country-input").value;
         const errorMessage=document.getElementById("error-message");
+        const hiddenDisplay=document.getElementById("hideId");
+        hiddenDisplay.style.display="flex";
         try{
         const response=await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
         // while waiting for response show spinner
+            
         const data=await response.json();
         const country=data[0];
-
+        
         // Example DOM updates
         document.getElementById('country-info').innerHTML = `
             <h2>${country.name.common}</h2>
@@ -16,7 +19,7 @@ async function searchCountry(){
             <p><strong>Region:</strong> ${country.region}</p>
             <img src="${country.flags.svg}" alt="${country.name.common} flag">
         `;
-            
+            console.log(country);
         }
         catch(error){
           
@@ -25,7 +28,7 @@ async function searchCountry(){
         }
         finally{
             
-            showLoad.style.display="none";
+            hiddenDisplay.style.display="none";
         }
      
 }
@@ -34,12 +37,8 @@ document.getElementById('search-btn').addEventListener('click', () => {
     const country = document.getElementById('country-input').value;
     searchCountry(country);
 });
+ async function getBorderCountry(codes){
+        for(let code in codes ){
 
-function showSpinner(){
-     const showLoad=document.getElementById("loading-spinner");
-     const hiddenBox=document.getElementById("hideId");
-     hiddenBox.style.display="flex";
-     hiddenBox.style.width="100%";
-    hiddenBox.style.height="100vh";
-    hiddenBox.style.backgroundColor="grey";
-}
+        }
+ }
