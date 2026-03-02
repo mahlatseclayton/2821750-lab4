@@ -16,8 +16,13 @@
 }
 /* Country Card  */
 .country-card{
-    background-color: azure;
+    background-color: rgb(240, 240, 240);
+    border:2px solid blue;
+    border-radius: 12px;
+    margin:20px;
     padding:20px;
+    align-items: center;
+    justify-content: center;
 }
 .border-grid{
     display:flex;
@@ -28,7 +33,7 @@
     font-weight:80%;
 }
 #hideId{
-      position: fixed;       /* covers entire screen */
+position: fixed;       /* covers entire screen */
   top: 0;
   left: 0;
   width: 100%;

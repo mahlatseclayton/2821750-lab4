@@ -2,8 +2,13 @@
      const errorMessage=document.getElementById("error-message");
 async function searchCountry() {
     const hiddenDisplay = document.getElementById("hideId");
+    const countryInfo=document.getElementById("country-info");
+    const borderContainer=document.getElementById("bordering-countries");
     const errorMessage = document.getElementById("error-message");
     hiddenDisplay.style.display = "flex";
+    errorMessage.innerText = "";
+    countryInfo.innerHTML = "";
+    borderContainer.innerHTML = "";
  const countryName = document.getElementById("country-input").value;
         if(countryName==""){
            errorMessage.innerText="Country Name required!";
@@ -57,6 +62,9 @@ async function getBorderCountry(codes) {
             const country = data[0];
 
             const borders = document.createElement("section");
+            borders.style.backgroundColor="rgb(240, 240, 240)";
+            borders.style.border="2px solid blue";
+            borders.style.borderRadius="12px";
             borders.style.margin="20px";
             borders.innerHTML = `
                 <h2>${country.name.common}</h2>
