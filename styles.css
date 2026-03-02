@@ -45,3 +45,10 @@
     display:none;
     height:100px;
 }
+.border-grid{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(221, 238, 238);
+    margin:20px;
+    padding:30px;
+}
