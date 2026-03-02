@@ -5,21 +5,22 @@ async function searchCountry() {
     const countryInfo=document.getElementById("country-info");
     const borderContainer=document.getElementById("bordering-countries");
     const errorMessage = document.getElementById("error-message");
-    hiddenDisplay.style.display = "flex";
+
+element.classList.remove('hidden');
     errorMessage.innerText = "";
     countryInfo.innerHTML = "";
     borderContainer.innerHTML = "";
  const countryName = document.getElementById("country-input").value;
         if(countryName==""){
            errorMessage.innerText="Country Name required!";
-           hiddenDisplay.style.display = "none";
+      
             return;
         }
         else{
             
     try {
        
-        const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+        const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
         const data = await response.json();
         const country = data[0];
 
@@ -37,13 +38,15 @@ async function searchCountry() {
         }
         else{
             errorMessage.innerText="No bordering countries";
-           hiddenDisplay.style.display = "none";
+          
         }
 
     } catch (error) {
         errorMessage.innerText = error.message;
     } finally {
-        hiddenDisplay.style.display = "none";
+        hiddenDisplay.classList.remove("visible");
+        element.classList.add('hidden');
+
     }}
 }
 // Event listeners
