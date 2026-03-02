@@ -47,7 +47,7 @@ async function searchCountry() {
         errorMessage.innerText = error.message;
     } finally {
  
-       spinner.classList.remove("hidden");
+         spinner.classList.add("hidden");
 
 
     }}

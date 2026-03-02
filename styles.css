@@ -36,7 +36,7 @@
 /* class to hide and show elements */
 .hidden{
     display:none;
-    height:100px;
+   
 }
 .border-grid{
     display:flex;
