@@ -1,9 +1,30 @@
 .spinner {
     /* Your styling */
+    background-color: blue;
+    width:20px;
+    height:20px;
+    align-items: center;
     animation: spin 1s linear infinite; /* Required */
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+/* Country Card  */
+.country-card{
+    background-color: azure;
+    padding:20px;
+}
+.border-grid{
+    display:flex;
+}
+.error{
+    color:red;
+    font-size: 14px;
+    font-weight:80%;
+}
+/* class to hide and show elements */
+.hidden{
+    display:none;
 }
